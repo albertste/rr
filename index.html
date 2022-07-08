@@ -1,0 +1,123 @@
+<html>
+		
+	<head>
+
+		<meta charset="utf-8" />
+
+		<title>Royal & Rose | Boutique Matchmaking Agency</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="stylesheet" href="main.css">
+
+	</head>
+
+	<body>
+
+		<div class='container'>
+
+			<div class='logo'>
+				<a href="index.html"><img src='img/rr-logo-1.png' class='logo-img' /></a>
+				<a href="https://instagram.com"><img src='img/instagram.png' class='icon-img' /></a>
+			</div>
+
+			<h2>We match amazing men and women.</h2>
+
+			<p>Every few months, we hand pick the most desirable single guys we can find among our friends and friends of friends. Our criteria: handsome, well-off, and under 35. Then:</p>
+
+			<div class='hiw-item'>
+				<div class='hiw-icon'>👋</div>
+				<p>
+					We reach out to you on social media if we think you might be a good fit for one of them.
+				</p>
+			</div>
+
+			<div class='hiw-item'>
+				<div class='hiw-icon'>👩</div>
+				<p>
+					If you're interested, we'll ask a few questions to get to know you better and make sure you're a good match.
+				</p>
+			</div>
+
+			<div class='hiw-item'>
+				<div class='hiw-icon'>👨</div>
+				<p>
+					Finally, we'll introduce you to him. If he's interested, we'll set you both up to meet and get to know each other. No texting required.
+				</p>
+			</div>
+
+			<p>Everything is <strong>free</strong> for both you and the bachelors. We make money from sponsorships and networking events.</p>
+
+			<p>Type in a bachelor's name (given to you by a matchmaker) to see their profile:</p>
+			
+			<p><input id='code' type='text'></p>
+
+			<p><a class='button' onclick="goToProfile()">Go to profile →</a></p>
+
+			<div class='sep'>~</div>
+			
+
+			<h2>Our Story</h2>
+
+			<p>Hi! We're Kayla and Melanie. We've been matching women with the most interesting, discerning, and affluent men since 2018.</p>
+
+			<p>We want to start off by saying that this isn't our full-time job. It's a hobby that we love to do, so we decided to formalize it and start this agency.</p>
+
+			<p>We know first-hand how exhausting finding a true connection can be. We were tired of dating guys who weren't up to our standards. Handsome, ambitious, kind – surely that wasn't too much to ask?</p>
+
+			<p>We tried online dating, but like many women we know, it freaked us out. There are thousands of predators and weirdos. It was impossible to filter through and talk with all our matches without knowing who can be trusted.</p>
+
+			<p>It became obvious that the most desirable men and women are not on dating apps, for two reasons.</p>
+
+			<p>The first is time. These people are focused on their ambitions. They don't want to deal with timewasters. They prefer to outsource the process and dedicate themselves to a few carefully vetted people.</p>
+
+			<p>The second is confidentiality. Sometimes, they just can't date online or be active on social media because they're in a high-profile job. They need a more careful and discreet way to date. Using a matchmaker makes sense.</p>
+
+			<p>The more we learned about modern dating, the more we understood that the men and women who desire each other are out there – they simply don't know about each other. We want to introduce them.</p>
+
+			<p>So, who are the bachelors we select? They often say they'd prefer to remain single than be with the wrong person (after all, they have fabulous lives). Most are highly accomplished, intelligent, well-traveled. Almost all are recently single and remain so for only a short time.</p>
+
+			<p>But perhaps more importantly, they're kind and real. The biggest turn-off for them is someone who wants them just for what they have.</p>
+
+			<p>Instagram can mess with our heads. We start having impossible expectations for our own life based on other people’s highlights. That house on the beach, those perfectly designed interiors, that rich and handsome husband, those endless vacations by private jet. When, in reality, we really just want to be with that person who makes us laugh.</p>
+
+			<p>All this to say – we took matters into our own hands and created this agency to meet the men we felt we deserved. And we did! We both recently got married to the loves of our lives who we met on TCBU.</p>
+
+			<p>We hope we can help you do the same.</p>
+
+			<p>Love,</p>
+
+			<p>[signatures]</p>
+
+			<div class='mm-images'>
+				<img src='img/kayla.jpg'>
+				<img src='img/melanie.jpg'>
+			</div>
+
+			<div class='sep'>~</div>
+
+			<div class='small'>
+				<div><a href='privacy.html'>Privacy Policy</a><a href='terms.html'>Terms &amp; Conditions</a></div>
+				<div class='disclaimer'>&copy; 2018-2022 Royal And Rose, Ltd. All rights reserved.</div>
+			</div>
+			
+		</div>
+
+		<script>
+			function goToProfile() {
+				const name = document.getElementById('code').value.toLowerCase();
+				if (!name || name == '') return;
+				window.location.href = name + '.html';
+			}
+		</script>
+
+	</body>
+
+</html>

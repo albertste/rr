@@ -1,0 +1,71 @@
+<html>
+		
+	<head>
+
+		<meta charset="utf-8" />
+
+		<title>Boutique Matchmaking Agency | This Could Be Us | TCBU</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+		<link rel="manifest" href="img/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+
+		<link rel="stylesheet" href="main.css">
+
+	</head>
+
+	<body>
+
+		<div class='container'>
+
+			<div class='logo'>
+				<a href="index.html"><img src='img/tcbu-logo.png' class='logo-img' /></a>
+				<a href="https://instagram.com"><img src='img/instagram.png' class='icon-img' /></a>
+			</div>
+
+			<h2>Almost There...</h2>
+
+			<p>Enter the code you got from our matchmaker to see <span id='name'></span>'s profile.</p>
+
+			<p><input id='code' type='text'></p>
+
+			<p id='error' class='error hidden'>This code is incorrect.</p>
+
+			<p><a class='button' onclick="goToProfile()">Go to profile →</a></p>
+			
+		</div>
+
+		<script>
+
+			let bachelor;
+
+			window.addEventListener('DOMContentLoaded', (event) => {
+				document.getElementById('code').focus();
+
+				const params = new Proxy(new URLSearchParams(window.location.search), {
+				  get: (searchParams, prop) => searchParams.get(prop),
+				});
+				
+				bachelor = params.b;
+
+				document.getElementById('name').innerHTML = bachelor;
+
+			});
+
+			function goToProfile() {
+
+				if (document.getElementById('code').value.toLowerCase() == 'mango' && bachelor == 'Albert') {
+					window.location.href = 'albert.html';
+				} else {
+					document.getElementById('error').classList.remove("hidden");
+				}
+			}
+		</script>
+	</body>
+
+</html>
