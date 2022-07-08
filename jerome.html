@@ -17,6 +17,36 @@
 
 		<link rel="stylesheet" href="main.css">
 
+		<script type="text/javascript">
+		  (function(e,t){var n=e.amplitude||{_q:[],_iq:{}};var r=t.createElement("script")
+		  ;r.type="text/javascript"
+		  ;r.integrity="sha384-+EO59vL/X7v6VE2s6/F4HxfHlK0nDUVWKVg8K9oUlvffAeeaShVBmbORTC2D3UF+"
+		  ;r.crossOrigin="anonymous";r.async=true
+		  ;r.src="https://cdn.amplitude.com/libs/amplitude-8.17.0-min.gz.js"
+		  ;r.onload=function(){if(!e.amplitude.runQueuedFunctions){
+		  console.log("[Amplitude] Error: could not load SDK")}}
+		  ;var i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)
+		  ;function s(e,t){e.prototype[t]=function(){
+		  this._q.push([t].concat(Array.prototype.slice.call(arguments,0)));return this}}
+		  var o=function(){this._q=[];return this}
+		  ;var a=["add","append","clearAll","prepend","set","setOnce","unset","preInsert","postInsert","remove"]
+		  ;for(var c=0;c<a.length;c++){s(o,a[c])}n.Identify=o;var u=function(){this._q=[]
+		  ;return this}
+		  ;var l=["setProductId","setQuantity","setPrice","setRevenueType","setEventProperties"]
+		  ;for(var p=0;p<l.length;p++){s(u,l[p])}n.Revenue=u
+		  ;var d=["init","logEvent","logRevenue","setUserId","setUserProperties","setOptOut","setVersionName","setDomain","setDeviceId","enableTracking","setGlobalUserProperties","identify","clearUserProperties","setGroup","logRevenueV2","regenerateDeviceId","groupIdentify","onInit","logEventWithTimestamp","logEventWithGroups","setSessionId","resetSessionId"]
+		  ;function v(e){function t(t){e[t]=function(){
+		  e._q.push([t].concat(Array.prototype.slice.call(arguments,0)))}}
+		  for(var n=0;n<d.length;n++){t(d[n])}}v(n);n.getInstance=function(e){
+		  e=(!e||e.length===0?"$default_instance":e).toLowerCase()
+		  ;if(!Object.prototype.hasOwnProperty.call(n._iq,e)){n._iq[e]={_q:[]};v(n._iq[e])
+		  }return n._iq[e]};e.amplitude=n})(window,document);
+
+		  amplitude.getInstance().init("0e0e7267eb977d832bf600bc8dd453a6", null, {includeReferrer: true});
+
+		  amplitude.getInstance().logEvent('Jerome');
+		</script>
+
 	</head>
 
 	<body>
@@ -25,10 +55,10 @@
 
 			<div class='logo'>
 				<a href="index.html"><img src='img/rr-logo-1.png' class='logo-img' /></a>
-				<a href="https://instagram.com"><img src='img/instagram.png' class='icon-img' /></a>
+				<a href="https://instagram.com/royalnrose"><img src='img/instagram.png' class='icon-img' /></a>
 			</div>
 
-			<h2>Jerome</h2>
+			<h2>Meet Jerome</h2>
 
 			<p>[photos]</p>
 
@@ -51,7 +81,7 @@
 
 			<h2>Bio</h2>
 
-			<p>This is Jerome. He's originally from Lebanon and has lived in the US, Portugal, France, and Dubai. He started out working in the technology industry in California where he built and sold several companies. Today he heads his family-run investment firm that invests in markets, startups, and real estate. He spends most of his time working, seeing friends, and staying in shape.</p>
+			<p>This is Jerome. He's from France and has lived in the US, Portugal, and Dubai. He started out working in the technology industry in California where he built and sold several companies. Today he heads his family-run investment firm that invests in markets, startups, and real estate. He spends most of his time working, seeing friends, and staying in shape.</p>
 
 			<div class='sep'>~</div>
 
@@ -138,7 +168,7 @@
 			<div class='sep'>~</div>
 
 			<div class='small'>
-				<div>Privacy Policy | Terms &amp; Conditions</div>
+				<div><a href='privacy.html'>Privacy Policy</a><a href='terms.html'>Terms &amp; Conditions</a></div>
 				<div class='disclaimer'>&copy; 2018-2022 Royal And Rose, Ltd. All rights reserved.</div>
 			</div>
 			
