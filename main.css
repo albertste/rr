@@ -156,7 +156,7 @@ input {
 	padding: 12px;
 	border-radius: 6px;
 	font-size: 20px;
-	width: 200px;
+	width: 220px !important;
 	font-weight: 600;
 	text-transform: uppercase;
 	outline: none;
@@ -186,9 +186,10 @@ input:focus {
 	cursor: pointer;
 	background-color: #FF1F1F;
 	color: #fff;
-	width: 200px;
+	width: 220px !important;
 	box-sizing: border-box;
 	text-align: center;
+	white-space: nowrap;
 }
 .button:hover {
 	background-color: #ED0000;
