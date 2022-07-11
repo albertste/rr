@@ -48,6 +48,23 @@
 		  amplitude.getInstance().init("0e0e7267eb977d832bf600bc8dd453a6", null, {includeReferrer: true});
 
 		  amplitude.getInstance().logEvent('Jerome');
+
+		  let previousPercent = 0;
+		  document.addEventListener('scroll', function(e) {
+		  	var h = document.documentElement, 
+		  	    b = document.body,
+		  	    st = 'scrollTop',
+		  	    sh = 'scrollHeight';
+
+		  	var percent = Math.floor((h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100);
+
+		  	if (percent > previousPercent + 10 || percent < previousPercent - 10) {
+		  		previousPercent = percent;
+		  		amplitude.getInstance().logEvent('Scrolled Jerome - ' + percent + '%');
+		  	}
+
+		  });
+
 		</script>
 
 
