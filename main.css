@@ -136,6 +136,7 @@ p, li {
 	letter-spacing: 0.05rem;
 	text-align: center;
 	word-break: break-all;
+	word-wrap: break-word;
 	line-height: 2;
 }
 .disclaimer {
