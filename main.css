@@ -54,7 +54,7 @@ h1,h2,h3,h4,.small,.disclaimer,.button, input {
 }
 
 h2 {
-	font-size: 28px;
+	font-size: 32px;
 }
 
 .sep {
@@ -135,6 +135,8 @@ p, li {
 	text-transform: uppercase;
 	letter-spacing: 0.05rem;
 	text-align: center;
+	word-break: break-all;
+	line-height: 2;
 }
 .disclaimer {
 	text-transform: none;
@@ -145,8 +147,9 @@ a {
 	color: #FF1F1F;
 }
 .small a {
-	margin-right: 16px;
+	margin: 0 8px;
 	text-decoration: none;
+	white-space: nowrap;
 }
 input {
 	padding: 12px;
