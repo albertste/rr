@@ -4,7 +4,7 @@
 
 		<meta charset="utf-8" />
 
-		<title>Jerome | Boutique Matchmaking Agency | Royal & Rose</title>
+		<title>Jerome | Royal & Rose | Boutique Matchmaking Agency</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
@@ -46,6 +46,17 @@
 		  }return n._iq[e]};e.amplitude=n})(window,document);
 
 		  amplitude.getInstance().init("0e0e7267eb977d832bf600bc8dd453a6", null, {includeReferrer: true});
+
+		  // get client name
+		  const params = new Proxy(new URLSearchParams(window.location.search), {
+		    get: (searchParams, prop) => searchParams.get(prop),
+		  });
+		  if (!params.c) {
+		  	window.location = 'index.html';
+		  }
+		  window.girlName = params.c.charAt(0).toUpperCase() + params.c.slice(1);
+
+		  amplitude.getInstance().setUserId(girlName);
 
 		  amplitude.getInstance().logEvent('Jerome');
 

@@ -105,7 +105,7 @@
 
 			<p>—</p>
 
-			<p>Type in a bachelor's name we've given you to see their profile:</p>
+			<p>Type in the code we've given you to see your bachelor's profile:</p>
 			
 			<p class='flex'><input id='code' type='text' autocomplete="off" spellcheck="false"><a class='button' onclick="goToProfile()">Go to profile →</a></p>
 
@@ -159,7 +159,10 @@
 				const name = document.getElementById('code').value.toLowerCase();
 				if (!name || name == '') return;
 				amplitude.getInstance().logEvent('Entered Name', {name: name});
-				window.location.href = name + '.html';
+				// name is formatted as [bachelor]+[client]
+				if (!name.includes('+')) return;
+				let arr = name.split('+');
+				window.location.href = arr[0] + '.html?c=' + arr[1];
 			}
 		</script>
 

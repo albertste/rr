@@ -50,6 +50,10 @@ html,body {
 	letter-spacing: 0.1rem;
 }
 
+#girl-name {
+	text-transform: capitalize;
+}
+
 h1,h2,h3,h4,.small,.disclaimer,.button, input {
 	font-family: 'Raleway', sans-serif;
 }
@@ -157,7 +161,7 @@ input {
 	padding: 12px;
 	border-radius: 6px;
 	font-size: 20px;
-	width: 220px !important;
+	width: 260px !important;
 	font-weight: 600;
 	text-transform: uppercase;
 	outline: none;
@@ -187,7 +191,7 @@ input:focus {
 	cursor: pointer;
 	background-color: #FF1F1F;
 	color: #fff;
-	width: 220px !important;
+	width: 260px !important;
 	box-sizing: border-box;
 	text-align: center;
 	white-space: nowrap;
