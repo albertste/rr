@@ -156,10 +156,11 @@
 
 		<script>
 			function goToProfile() {
-				const name = document.getElementById('code').value.toLowerCase();
+				let name = document.getElementById('code').value.toLowerCase();
 				if (!name || name == '') return;
 				amplitude.getInstance().logEvent('Entered Name', {name: name});
 				// name is formatted as [bachelor]+[client]
+				name = name.replace(/\s+/g, '');
 				if (!name.includes('+')) return;
 				let arr = name.split('+');
 				window.location.href = arr[0] + '.html?c=' + arr[1];
